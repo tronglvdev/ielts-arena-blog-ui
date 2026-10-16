@@ -6,7 +6,7 @@ function TopBar() {
       <div className="top-bar-container">
         <div className="top-bar-left">
           <div className="svg">
-            <i className="fa-solid fa-envelope" aria-hidden="true"></i>
+            <i className="fa-solid fa-envelope"></i>
           </div>
           <a
             href="mailto:contact@ieltsarena.edu.vn"
@@ -27,17 +27,17 @@ function TopBar() {
             092 9999 535
           </a>
           <div className="top-bar-icons">
-            <a href="#" className="svg" aria-label="Facebook">
-              <i className="fa-brands fa-facebook" aria-hidden="true"></i>
+            <a href="#" className="svg">
+              <i className="fa-brands fa-facebook"></i>
             </a>
-            <a href="#" className="svg" aria-label="YouTube">
-              <i className="fa-brands fa-youtube" aria-hidden="true"></i>
+            <a href="#" className="svg">
+              <i className="fa-brands fa-youtube"></i>
             </a>
-            <a href="#" className="svg" aria-label="Instagram">
-              <i className="fa-brands fa-instagram" aria-hidden="true"></i>
+            <a href="#" className="svg">
+              <i className="fa-brands fa-instagram"></i>
             </a>
-            <a href="#" className="svg" aria-label="TikTok">
-              <i className="fa-brands fa-tiktok" aria-hidden="true"></i>
+            <a href="#" className="svg">
+              <i className="fa-brands fa-tiktok"></i>
             </a>
           </div>
         </div>

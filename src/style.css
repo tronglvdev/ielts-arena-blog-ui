@@ -90,6 +90,10 @@ header {
   gap: 17.59px;
   cursor: pointer;
 }
+.top-bar-icons .svg {
+  color: #ffffff;
+  text-decoration: none;
+}
 .main-nav {
   background-color: rgba(255, 255, 255, 1);
   display: flex;
@@ -144,7 +148,7 @@ header {
   display: flex;
   width: 117.352px;
   height: 42px;
-  margin-left: 5px;
+  /* margin-left: 5px; */
 }
 .load-more-wrapper {
   width: 124.055px;
@@ -433,11 +437,11 @@ header {
   gap: 16px;
 }
 .popular-date {
-  color: red;
+  color: rgb(216, 34, 33);
   font-size: 16px;
-}
-.popular-date span {
-  margin-right: 4px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
 }
 
 .popular-content p {

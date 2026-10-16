@@ -20,13 +20,13 @@ function Footer() {
             <img src="/images/logo-footer.png" alt="IELTS Arena Logo" />
           </div>
           <div className="footer-contact-item">
-            <i className="fa-solid fa-phone" aria-hidden="true"></i>
+            <i className="fa-solid fa-phone"></i>
             <a href="tel:092999525" className="f-bar-item">
               092 999 525
             </a>
           </div>
           <div className="footer-contact-item">
-            <i className="fa-solid fa-envelope" aria-hidden="true"></i>
+            <i className="fa-solid fa-envelope"></i>
             <a href="mailto:contact@ieltsarena.edu.vn" className="f-bar-item">
               contact@ieltsarena.edu.vn
             </a>
@@ -34,17 +34,17 @@ function Footer() {
 
           <div className="footer-contact-item">
             <div className="f-bar-icons">
-              <a href="#" aria-label="Facebook">
-                <i className="fa-brands fa-facebook" aria-hidden="true"></i>
+              <a href="#">
+                <i className="fa-brands fa-facebook"></i>
               </a>
-              <a href="#" aria-label="YouTube">
-                <i className="fa-brands fa-youtube" aria-hidden="true"></i>
+              <a href="#">
+                <i className="fa-brands fa-youtube"></i>
               </a>
               <a href="#" aria-label="Instagram">
-                <i className="fa-brands fa-instagram" aria-hidden="true"></i>
+                <i className="fa-brands fa-instagram"></i>
               </a>
-              <a href="#" aria-label="TikTok">
-                <i className="fa-brands fa-tiktok" aria-hidden="true"></i>
+              <a href="#">
+                <i className="fa-brands fa-tiktok"></i>
               </a>
             </div>
           </div>

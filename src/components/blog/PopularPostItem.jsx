@@ -1,5 +1,5 @@
 import React from "react";
-
+import { FaClock } from "react-icons/fa";
 function PopularPostItem({ post, onSelectPost }) {
   const { date, title, summary, image } = post;
 
@@ -20,7 +20,7 @@ function PopularPostItem({ post, onSelectPost }) {
       </div>
       <div className="popular-content">
         <div className="popular-date">
-          <span aria-hidden="true">&#128340;</span>
+          <FaClock />
           {date}
         </div>
         <p>{summary}</p>

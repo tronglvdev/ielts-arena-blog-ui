@@ -3,16 +3,12 @@ import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { surveySchema } from "../../schemas/surveySchema";
 
-const STORAGE_KEY = "userConsultData";
-
 function ConsultForm() {
-  const [submittedData, setSubmittedData] = useState(null);
-
   const {
     register,
-    handleSubmit,
     reset,
-    formState: { errors, isSubmitting },
+    handleSubmit,
+    formState: { errors },
   } = useForm({
     resolver: zodResolver(surveySchema),
     defaultValues: {
@@ -24,22 +20,8 @@ function ConsultForm() {
     },
   });
 
-  useEffect(() => {
-    try {
-      const saved = localStorage.getItem(STORAGE_KEY);
-      if (saved) {
-        const parsed = JSON.parse(saved);
-        reset(parsed);
-      }
-    } catch {}
-  }, [reset]);
-
   const onSubmit = (data) => {
-    try {
-      localStorage.setItem(STORAGE_KEY, JSON.stringify(data));
-    } catch {}
-    setSubmittedData(data);
-    alert("Đặt lịch tư vấn thành công!\n" + JSON.stringify(data, null, 2));
+    alert(JSON.stringify(data, null, 2));
   };
 
   return (
@@ -120,36 +102,9 @@ function ConsultForm() {
             </div>
           </div>
 
-          <button
-            type="submit"
-            className="btn-schedule"
-            disabled={isSubmitting}
-          >
-            {isSubmitting ? "Đang gửi..." : "Đặt lịch hẹn"}
+          <button type="submit" className="btn-schedule">
+            Đặt lịch hẹn
           </button>
-
-          {submittedData && (
-            <div className="result-box result-box-active">
-              <p className="title">
-                <strong>Thông tin đã gửi thành công</strong>
-              </p>
-              <p>
-                <strong>Họ tên:</strong> {submittedData.fullName}
-              </p>
-              <p>
-                <strong>Số điện thoại:</strong> {submittedData.phoneNumber}
-              </p>
-              <p>
-                <strong>Email:</strong> {submittedData.email}
-              </p>
-              <p>
-                <strong>Đối tượng:</strong> {submittedData.role}
-              </p>
-              <p>
-                <strong>Mục tiêu:</strong> {submittedData.goal}
-              </p>
-            </div>
-          )}
         </form>
       </div>
     </div>
